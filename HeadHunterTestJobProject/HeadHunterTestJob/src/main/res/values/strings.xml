@@ -12,8 +12,12 @@
     <string name="hint_position">Должность</string>
     <string name="hint_salary">Зарплата</string>
     <string name="button_sendCV">Отправить резюме</string>
-    <string name=""></string>
-    <string name=""></string>
-
+    <string name="label_fullname">ФИО</string>
+    <string name="label_phone">Телефон</string>
+    <string name="label_email">Email</string>
+    <string name="label_dateOfBirth">Дата рождения</string>
+    <string name="label_gender">Пол</string>
+    <string name="label_position">Должность</string>
+    <string name="label_salary">Зарплата</string>
 
 </resources>
