@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+    <LinearLayout android:id="@+id/linearLayout"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical" android:padding="5dp">
+        <EditText android:id="@+id/fullnameEditText"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:imeOptions="actionNext"
+                  android:hint="@string/hint_fullname"
+                  android:inputType="textPersonName|textCapWords" />
+        <EditText android:id="@+id/dateOfBirthEditText"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:imeOptions="actionNext"
+                  android:hint="@string/hint_dateOfBirth"
+                  android:inputType="date" />
+        <EditText android:id="@+id/genderEditText"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:imeOptions="actionNext"
+                  android:hint="@string/hint_gender"
+                  android:inputType="text|textCapWords" />
+        <EditText android:id="@+id/positionEditText"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:imeOptions="actionNext"
+                  android:hint="@string/hint_position"
+                  android:inputType="text" />
+        <EditText android:id="@+id/salaryEditText"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:imeOptions="actionNext"
+                  android:hint="@string/hint_salary"
+                  android:inputType="numberDecimal" />
+        <EditText android:id="@+id/phoneEditText"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:imeOptions="actionNext"
+                  android:hint="@string/hint_phone"
+                  android:inputType="phone" />
+        <EditText android:id="@+id/emailEditText"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:imeOptions="actionNext"
+                  android:hint="@string/hint_email"
+                  android:inputType="textEmailAddress" />
+        <Button android:id="@+id/sendCVButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/button_sendCV" />
+    </LinearLayout>
+</ScrollView>

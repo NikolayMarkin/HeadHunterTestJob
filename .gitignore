@@ -6,3 +6,8 @@
 *.ear
 
 HeadHunterTestJobProject/HeadHunterTestJob/build/
+HeadHunterTestJobProject/HeadHunterTestJob/src/main/gen/
+HeadHunterTestJobProject/out/
+HeadHunterTestJobProject/.idea/
+HeadHunterTestJobProject/.gradle/
+HeadHunterTestJobProject/gradle/
