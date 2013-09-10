@@ -11,6 +11,10 @@
     <string name="hint_gender">Пол</string>
     <string name="hint_position">Должность</string>
     <string name="hint_salary">Зарплата</string>
+    <string-array name="gender_list">
+        <item>Муж.</item>
+        <item>Жен.</item>
+    </string-array>
     <string name="button_sendCV">Отправить резюме</string>
     <string name="label_fullname">ФИО</string>
     <string name="label_phone">Телефон</string>

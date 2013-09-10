@@ -22,12 +22,11 @@
                   android:imeOptions="actionNext"
                   android:hint="@string/hint_dateOfBirth"
                   android:inputType="date" />
-        <EditText android:id="@+id/genderEditText"
+        <Spinner android:id="@+id/genderSpiner"
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
-                  android:imeOptions="actionNext"
-                  android:hint="@string/hint_gender"
-                  android:inputType="text|textCapWords" />
+                  android:entries="@array/gender_list"
+                  android:hint="@string/hint_gender"/>
         <EditText android:id="@+id/positionEditText"
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
@@ -49,7 +48,7 @@
         <EditText android:id="@+id/emailEditText"
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
-                  android:imeOptions="actionNext"
+                  android:imeOptions="actionDone"
                   android:hint="@string/hint_email"
                   android:inputType="textEmailAddress" />
         <Button android:id="@+id/sendCVButton"
