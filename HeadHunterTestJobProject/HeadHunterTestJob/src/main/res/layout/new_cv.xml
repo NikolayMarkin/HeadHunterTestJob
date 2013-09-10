@@ -19,9 +19,7 @@
         <EditText android:id="@+id/dateOfBirthEditText"
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
-                  android:imeOptions="actionNext"
-                  android:hint="@string/hint_dateOfBirth"
-                  android:inputType="date" />
+                  android:hint="@string/hint_dateOfBirth" />
         <Spinner android:id="@+id/genderSpiner"
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
