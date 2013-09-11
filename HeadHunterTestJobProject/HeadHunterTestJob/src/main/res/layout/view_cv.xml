@@ -63,6 +63,7 @@
                       style="@style/ContactLabelTextView"
                       android:text="@string/label_phone"></TextView>
             <TextView android:id="@+id/phoneTextView"
+                    android:autoLink="phone"
                       style="@style/ContactTextView"></TextView>
         </TableRow>
 
@@ -73,6 +74,7 @@
                       style="@style/ContactLabelTextView"
                       android:text="@string/label_email"></TextView>
             <TextView android:id="@+id/emailTextView"
+                      android:autoLink="email"
                       style="@style/ContactTextView"></TextView>
         </TableRow>
 

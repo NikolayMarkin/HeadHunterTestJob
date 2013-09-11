@@ -38,7 +38,7 @@ public class ViewCV extends Activity {
         genderTextView = (TextView) findViewById(R.id.genderTextView);
         positionTextView = (TextView) findViewById(R.id.positionTextView);
         salaryTextView = (TextView) findViewById(R.id.salaryTextView);
-        phoneTextView = (TextView) findViewById(R.id.positionTextView);
+        phoneTextView = (TextView) findViewById(R.id.phoneTextView);
         emailTextView = (TextView) findViewById(R.id.emailTextView);
 
         // получить дополнения

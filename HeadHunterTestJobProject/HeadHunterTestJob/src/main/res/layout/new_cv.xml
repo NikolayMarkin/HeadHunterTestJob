@@ -31,7 +31,7 @@
                   android:layout_height="wrap_content"
                   android:imeOptions="actionNext"
                   android:hint="@string/hint_position"
-                  android:inputType="text" />
+                  android:inputType="text|textCapSentences" />
         <EditText android:id="@+id/salaryEditText"
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
