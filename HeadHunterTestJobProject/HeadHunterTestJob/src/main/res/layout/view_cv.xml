@@ -12,7 +12,7 @@
             <TextView android:id="@+id/fullnameLabelTextView"
                       style="@style/ContactLabelTextView"
                       android:text="@string/label_fullname"></TextView>
-            <TextView android:id="@+id/nameTextView"
+            <TextView android:id="@+id/fullnameTextView"
                       style="@style/ContactTextView"></TextView>
         </TableRow>
 

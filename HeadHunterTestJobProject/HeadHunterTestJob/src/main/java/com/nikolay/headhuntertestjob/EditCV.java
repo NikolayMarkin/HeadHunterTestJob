@@ -9,6 +9,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -16,19 +17,46 @@ import java.util.Date;
 
 public class EditCV extends Activity {
 
+    // ключи для взаимодействия между активностями
+    public final static String FULL_NAME = "com.nikolay.headhuntertestjob.FULLNAME";
+    public final static String DATE_OF_BIRTH = "com.nikolay.headhuntertestjob.DATEOFBIRTH";
+    public final static String GENDER = "com.nikolay.headhuntertestjob.GENDER";
+    public final static String POSITION = "com.nikolay.headhuntertestjob.POSITION";
+    public final static String SALARY = "com.nikolay.headhuntertestjob.SALARY";
+    public final static String PHONE = "com.nikolay.headhuntertestjob.PHONE";
+    public final static String EMAIL = "com.nikolay.headhuntertestjob.EMAIL";
+
     private int mYear;
     private int mMonth;
     private int mDay;
+    private String mFullName;
+    private String mGender;
+    private String mPosition;
+    private double mSalary;
+    private String mPhone;
+    private String mEmail;
 
     private EditText dateOfBirthEditText;
+    private EditText fullNameEditText;
+    private Spinner genderSpinner;
+    private EditText positionEditText;
+    private EditText salaryEditText;
+    private EditText phoneEditText;
+    private EditText emailEditText;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.new_cv);
 
-        dateOfBirthEditText = (EditText) findViewById(R.id.dateOfBirthEditText);
+        fullNameEditText = (EditText) findViewById(R.id.fullnameEditText);
+        genderSpinner = (Spinner) findViewById(R.id.genderSpiner);
+        positionEditText = (EditText) findViewById(R.id.positionEditText);
+        salaryEditText = (EditText) findViewById(R.id.salaryEditText);
+        phoneEditText = (EditText) findViewById(R.id.phoneEditText);
+        emailEditText = (EditText) findViewById(R.id.emailEditText);
 
+        dateOfBirthEditText = (EditText) findViewById(R.id.dateOfBirthEditText);
         dateOfBirthEditText.setOnClickListener(dateOfBirthTextListener);
 
         Button sendCVButton = (Button) findViewById(R.id.sendCVButton);
@@ -71,6 +99,15 @@ public class EditCV extends Activity {
         public void onClick(View view) {
             // преключиться к просмотру резюме
             Intent viewCV = new Intent(EditCV.this, ViewCV.class);
+            // предать данные в виде дополнения к Intent
+            viewCV.putExtra(FULL_NAME, fullNameEditText.getText().toString());
+            viewCV.putExtra(DATE_OF_BIRTH, dateOfBirthEditText.getText().toString());
+            viewCV.putExtra(GENDER, genderSpinner.getSelectedItem().toString());
+            viewCV.putExtra(POSITION, positionEditText.getText().toString());
+            viewCV.putExtra(SALARY,positionEditText.getText().toString());
+            viewCV.putExtra(PHONE, phoneEditText.getText().toString());
+            viewCV.putExtra(EMAIL, emailEditText.getText().toString());
+
             startActivity(viewCV);
         }
     };
