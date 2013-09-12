@@ -23,5 +23,8 @@
     <string name="label_gender">Пол</string>
     <string name="label_position">Должность</string>
     <string name="label_salary">Зарплата</string>
+    <string name="title_exit">Выйти из приложения?</string>
+    <string name="message_exit">Вы действительно хотите выйти?</string>
+    <string name="label_answer">Ответ соискателю</string>
 
 </resources>

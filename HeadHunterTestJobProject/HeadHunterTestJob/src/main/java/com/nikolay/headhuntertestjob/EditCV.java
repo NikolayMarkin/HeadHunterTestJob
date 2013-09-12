@@ -1,9 +1,12 @@
 package com.nikolay.headhuntertestjob;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -15,16 +18,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-public class EditCV extends Activity {
-
-    // ключи для взаимодействия между активностями
-    public final static String FULL_NAME = "com.nikolay.headhuntertestjob.FULLNAME";
-    public final static String DATE_OF_BIRTH = "com.nikolay.headhuntertestjob.DATEOFBIRTH";
-    public final static String GENDER = "com.nikolay.headhuntertestjob.GENDER";
-    public final static String POSITION = "com.nikolay.headhuntertestjob.POSITION";
-    public final static String SALARY = "com.nikolay.headhuntertestjob.SALARY";
-    public final static String PHONE = "com.nikolay.headhuntertestjob.PHONE";
-    public final static String EMAIL = "com.nikolay.headhuntertestjob.EMAIL";
+public class EditCV extends BaseActivity {
 
     private int mYear;
     private int mMonth;
@@ -47,6 +41,11 @@ public class EditCV extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (getIntent().getBooleanExtra("EXIT", false)) {
+            finish();
+        }
+
         setContentView(R.layout.new_cv);
 
         fullNameEditText = (EditText) findViewById(R.id.fullnameEditText);
@@ -104,11 +103,13 @@ public class EditCV extends Activity {
             viewCV.putExtra(DATE_OF_BIRTH, dateOfBirthEditText.getText().toString());
             viewCV.putExtra(GENDER, genderSpinner.getSelectedItem().toString());
             viewCV.putExtra(POSITION, positionEditText.getText().toString());
-            viewCV.putExtra(SALARY,positionEditText.getText().toString());
+            viewCV.putExtra(SALARY, salaryEditText.getText().toString());
             viewCV.putExtra(PHONE, phoneEditText.getText().toString());
             viewCV.putExtra(EMAIL, emailEditText.getText().toString());
 
             startActivity(viewCV);
         }
     };
+
+
 }

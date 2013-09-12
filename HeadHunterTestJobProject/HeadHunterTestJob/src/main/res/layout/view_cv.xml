@@ -78,5 +78,20 @@
                       style="@style/ContactTextView"></TextView>
         </TableRow>
 
+        <TableRow>
+            <TextView android:id="@+id/emailLabelTextView"
+                      style="@style/ContactLabelTextView"
+                      android:layout_span="2"
+                      android:text="@string/label_answer"></TextView>
+        </TableRow>
+        <TableRow>
+            <EditText android:id="@+id/answerEditText"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      style="@style/ContactTextView"
+                      android:layout_span="2"
+                      android:lines="5"/>
+        </TableRow>
+
     </TableLayout>
 </ScrollView>
