@@ -20,6 +20,8 @@ public class BaseActivity extends Activity {
     public final static String PHONE = "com.nikolay.headhuntertestjob.PHONE";
     public final static String EMAIL = "com.nikolay.headhuntertestjob.EMAIL";
     public final static String CLOSE = "com.nikolay.headhuntertestjob.CLOSE";
+    public final static String SEND_MESSAGE = "com.nikolay.headhuntertestjob.SEND_MESSAGE";
+    public final static String MESSAGE = "com.nikolay.headhuntertestjob.MESSAGE";
 
 
     private KillReceiver mKillReceiver;
@@ -27,6 +29,8 @@ public class BaseActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        mKillReceiver = new KillReceiver();
 
         IntentFilter filter = new IntentFilter(CLOSE);
         registerReceiver(mKillReceiver, filter);
@@ -49,17 +53,14 @@ public class BaseActivity extends Activity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         // при согласии выйти из приложения
-
-                        finish();
-
-                        final Intent intent = new Intent(getApplicationContext(), BaseActivity.class);
+                        final Intent intent = new Intent();
                         intent.setAction(CLOSE);
                         sendBroadcast(intent);
                     }
                 }).create().show();
     }
 
-    public class KillReceiver extends BroadcastReceiver {
+    private class KillReceiver extends BroadcastReceiver {
         @Override
         public void onReceive(Context context, Intent intent) {
             finish();

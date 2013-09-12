@@ -26,5 +26,7 @@
     <string name="title_exit">Выйти из приложения?</string>
     <string name="message_exit">Вы действительно хотите выйти?</string>
     <string name="label_answer">Ответ соискателю</string>
+    <string name="button_sendAnswer">Отправить ответ</string>
+    <string name="title_aswer">Ответ работодателя</string>
 
 </resources>

@@ -90,7 +90,16 @@
                       android:layout_height="wrap_content"
                       style="@style/ContactTextView"
                       android:layout_span="2"
-                      android:lines="5"/>
+                      android:inputType="textMultiLine|textCapSentences"
+                      android:lines="5"
+                      />
+        </TableRow>
+        <TableRow>
+            <Button android:id="@+id/sendAnswerButton"
+                android:layout_span="2"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@string/button_sendAnswer"/>
         </TableRow>
 
     </TableLayout>

@@ -1,13 +1,11 @@
 package com.nikolay.headhuntertestjob;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class ViewCV extends BaseActivity {
@@ -29,16 +27,11 @@ public class ViewCV extends BaseActivity {
     private TextView salaryTextView;
     private TextView phoneTextView;
     private TextView emailTextView;
+    private EditText answerEditText;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        if (getIntent().getBooleanExtra("EXIT", false)) {
-            finish();
-        }
-
-
         setContentView(R.layout.view_cv);
 
         fullnameTextView = (TextView) findViewById(R.id.fullnameTextView);
@@ -48,6 +41,7 @@ public class ViewCV extends BaseActivity {
         salaryTextView = (TextView) findViewById(R.id.salaryTextView);
         phoneTextView = (TextView) findViewById(R.id.phoneTextView);
         emailTextView = (TextView) findViewById(R.id.emailTextView);
+        answerEditText = (EditText) findViewById(R.id.answerEditText);
 
         // получить дополнения
         Bundle extras = getIntent().getExtras();
@@ -62,7 +56,26 @@ public class ViewCV extends BaseActivity {
             emailTextView.setText(extras.getString(EMAIL));
         }
 
+        // установить обработчик нажатия кнопки "Отправить ответ"
+        Button sendAnswerButton = (Button) findViewById(R.id.sendAnswerButton);
+        sendAnswerButton.setOnClickListener(sendAnswerButtonClickListener);
     }
+
+    OnClickListener sendAnswerButtonClickListener = new OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            // получить ответ и отправить его соискателю
+            String answer = answerEditText.getText().toString();
+
+            Intent answerMessage = new Intent();
+            answerMessage.putExtra(MESSAGE, answer);
+            answerMessage.setAction(SEND_MESSAGE);
+            sendBroadcast(answerMessage);
+
+            // возврат к предыдущему Activity
+            finish();
+        }
+    };
 
 
 }

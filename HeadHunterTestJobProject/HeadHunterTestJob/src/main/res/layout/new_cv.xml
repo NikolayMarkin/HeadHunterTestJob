@@ -16,11 +16,22 @@
                   android:imeOptions="actionNext"
                   android:hint="@string/hint_fullname"
                   android:inputType="textPersonName|textCapWords" />
-        <EditText android:id="@+id/dateOfBirthEditText"
+        <!--<EditText android:id="@+id/dateOfBirthEditText"
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:hint="@string/hint_dateOfBirth"
-                android:inputType="date"/>
+                android:inputType="none"/>-->
+        <LinearLayout android:id="@+id/dateTableRow"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView android:id="@+id/dateOfBirthLabelTextView"
+                style="@style/ContactLabelTextView"
+                android:text="@string/label_dateOfBirth"></TextView>
+            <TextView android:id="@+id/dateOfBirthSelectTextView"
+                android:layout_width="match_parent"
+                style="@style/ContactTextView"></TextView>
+        </LinearLayout>
         <LinearLayout android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                 android:orientation="horizontal">
