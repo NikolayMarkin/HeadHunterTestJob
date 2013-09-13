@@ -16,11 +16,6 @@
                   android:imeOptions="actionNext"
                   android:hint="@string/hint_fullname"
                   android:inputType="textPersonName|textCapWords" />
-        <!--<EditText android:id="@+id/dateOfBirthEditText"
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:hint="@string/hint_dateOfBirth"
-                android:inputType="none"/>-->
         <LinearLayout android:id="@+id/dateTableRow"
             android:orientation="horizontal"
             android:layout_width="match_parent"
